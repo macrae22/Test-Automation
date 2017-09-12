@@ -1,6 +1,10 @@
 exports.config = {
-  specs : ['C:/Users/MartynMacrae/Test-Automation/test_automation/tests/smoketests.js'],
+  specs : ['C:/Users/MartynMacrae/Test-Automation/tests/smoketests.js'],
   'seleniumAddress': 'http://hub-cloud.browserstack.com/wd/hub',
+
+  onPrepare : function() {
+    browser.manage().window().maximize();
+  },
 
   'capabilities': {
     'browserstack.user': 'jasonbunting1',
