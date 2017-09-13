@@ -23,7 +23,7 @@ describe('Lego', function () {
         browser.quit();
     });
 
-    describe('Homepage', function () {
+    describe('Lego Homepage', function () {
 
         it('Shop Search', function () {
             legoHome.clickShop();
