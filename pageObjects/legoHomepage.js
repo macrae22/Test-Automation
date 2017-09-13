@@ -22,14 +22,12 @@ var legoHomepage = function () {
         browser.wait(EC.elementToBeClickable(this.shopOption), 10000);
         this.shopOption.click();
         browser.sleep('3000');
-        console.log('I clicked the SHOP option!!');
     }
 
     this.searchFor = function (searchText) {
         this.searchField.sendKeys(searchText);
         browser.actions().sendKeys(protractor.Key.ENTER).perform();
         browser.sleep('3000');
-        console.log('I did a search!!');
     }
 
     
