@@ -56,17 +56,31 @@ describe('Lego', function () {
         it('Privacy Policy test', function () {
             legoHome.clickPrivacyPolicy();
 
-            browser.switchTo().frame(1).then(function () {
+            browser.switchTo().frame(1);
 
-                //Check 'Privacy Policy' header is correct
-                var privacyPolicyHeader = element(by.tagName('h3'));
-                expect(privacyPolicyHeader.getText()).toEqual('Your privacy');
-            });
-
-
-
+            //Check 'Privacy Policy' header is correct
+            var privacyPolicyHeader = element(by.tagName('h3'));
+            expect(privacyPolicyHeader.getText()).toEqual('Your privacy');
         });
 
+        it('Cookie Policy test', function () {
+            legoHome.clickCookiePolicy();
+
+            browser.switchTo().frame(1);
+
+            //Check 'Cookie Policy' header is correct
+            var cookieHeader = element(by.tagName('h2'));
+            expect(cookieHeader.getText()).toContain('Cookie Policy');
+        });
+
+        it('Legal Notice test', function () {
+            legoHome.clickLegalNotice();
+            
+            //Check 'Leagal Notice' header is correct
+            var legalNoticeHeader = element(by.tagName('h1'));
+            expect(legalNoticeHeader.getText()).toContain('Legal Notice');
+
+        });
 
     });
 
