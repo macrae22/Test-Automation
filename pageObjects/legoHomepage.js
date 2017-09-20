@@ -10,6 +10,7 @@ var legoHomepage = function () {
     //Attributes - WebElements of the page
     this.shopOption = element(by.className('gn-icon gn-icon-shop'));
     this.searchField = element(by.name('query'));
+    this.privacyPolicy = element(by.id('GFSpplink'));
 
 
     //Methods - Actions performed at the page using the webElement
@@ -28,6 +29,11 @@ var legoHomepage = function () {
         this.searchField.sendKeys(searchText);
         browser.actions().sendKeys(protractor.Key.ENTER).perform();
         browser.sleep('3000');
+    }
+
+    this.clickPrivacyPolicy = function () {
+        browser.wait(EC.elementToBeClickable(this.privacyPolicy), 10000);
+        this.privacyPolicy.click();
     }
 
     
