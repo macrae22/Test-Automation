@@ -9,12 +9,16 @@ var legoHomepage = function () {
 
     //Attributes - WebElements of the page
     this.shopOption = element(by.className('gn-icon gn-icon-shop'));
+    this.productsOption = element(by.className('gn-icon gn-icon-products'));
+    this.gamesOption = element(by.className('gn-icon gn-icon-games'));
+    this.createAndShareOption = element(by.className('gn-icon gn-icon-life gn-icon-life-small'));
     this.searchField = element(by.name('query'));
     this.privacyPolicy = element(by.id('GFSpplink'));
     this.cookiePolicy = element(by.id('GFScilink'));
     this.legalNotice = element(by.css('a[href*="https://www.lego.com/en-gb/legal-notices"]'));
     this.termsOfUse = element(by.css('a[href*="https://www.lego.com/en-gb/legal/legal-notice"]'));
     this.buildinginstructions = element(by.css('a[href*="https://www.lego.com/en-gb/service/buildinginstructions"]'));
+
 
 
     //Methods - Actions performed at the page using the webElement
@@ -58,6 +62,21 @@ var legoHomepage = function () {
     this.clickBuildingInstructions = function () {
         browser.wait(EC.elementToBeClickable(this.buildinginstructions), 10000);
         this.buildinginstructions.click();
+    }
+
+    this.clickProducts = function () {
+        browser.wait(EC.elementToBeClickable(this.productsOption), 10000);
+        this.productsOption.click();
+    }
+
+    this.clickGames = function () {
+        browser.wait(EC.elementToBeClickable(this.gamesOption), 10000);
+        this.gamesOption.click();
+    }
+
+    this.clickCreateAndShare = function () {
+        browser.wait(EC.elementToBeClickable(this.createAndShareOption), 10000);
+        this.createAndShareOption.click();
     }
 
     

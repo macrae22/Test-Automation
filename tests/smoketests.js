@@ -100,6 +100,33 @@ describe('Lego', function () {
 
         });
 
+        it('Products page test', function () {
+            legoHome.clickProducts();
+
+            //Check we are on the 'Products' page
+            var productsPageHeader = element(by.css('li.active [itemprop="name"]'));
+            expect(productsPageHeader.getText()).toContain('Products');
+
+        });
+
+        it('Games page test', function () {
+            legoHome.clickGames();
+
+            //Check we are on the 'Games' page
+            var gamesPageHeader = element(by.css('li.active [itemprop="name"]'));
+            expect(gamesPageHeader.getText()).toContain('Games');
+
+        });
+
+        it('Create & Share page test', function () {
+            legoHome.clickCreateAndShare();
+
+            //Check we are on the 'Create & Share' page
+            var gamesPageHeader = element(by.css('h3.cta-headline'));
+            expect(gamesPageHeader.getText()).toContain('WELCOME TO LEGO® LIFE');
+
+        });
+
     });
 
 
