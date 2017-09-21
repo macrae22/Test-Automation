@@ -12,6 +12,7 @@ var legoHomepage = function () {
     this.productsOption = element(by.className('gn-icon gn-icon-products'));
     this.gamesOption = element(by.className('gn-icon gn-icon-games'));
     this.createAndShareOption = element(by.className('gn-icon gn-icon-life gn-icon-life-small'));
+    this.videosOption = element(by.className('gn-icon gn-icon-videos'));
     this.searchField = element(by.name('query'));
     this.privacyPolicy = element(by.id('GFSpplink'));
     this.cookiePolicy = element(by.id('GFScilink'));
@@ -77,6 +78,11 @@ var legoHomepage = function () {
     this.clickCreateAndShare = function () {
         browser.wait(EC.elementToBeClickable(this.createAndShareOption), 10000);
         this.createAndShareOption.click();
+    }
+
+    this.clickVideos = function () {
+        browser.wait(EC.elementToBeClickable(this.videosOption), 10000);
+        this.videosOption.click();
     }
 
     

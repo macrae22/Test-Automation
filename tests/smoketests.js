@@ -127,6 +127,15 @@ describe('Lego', function () {
 
         });
 
+        it('Video page test', function () {
+            legoHome.clickVideos();
+
+            //Check we are on the 'Video' page
+            var videoPageHeader = element(by.css('li.active [itemprop="name"]'));
+            expect(videoPageHeader.getText()).toContain('Videos');
+
+        });
+
     });
 
 
