@@ -13,6 +13,8 @@ var legoHomepage = function () {
     this.privacyPolicy = element(by.id('GFSpplink'));
     this.cookiePolicy = element(by.id('GFScilink'));
     this.legalNotice = element(by.css('a[href*="https://www.lego.com/en-gb/legal-notices"]'));
+    this.termsOfUse = element(by.css('a[href*="https://www.lego.com/en-gb/legal/legal-notice"]'));
+    this.buildinginstructions = element(by.css('a[href*="https://www.lego.com/en-gb/service/buildinginstructions"]'));
 
 
     //Methods - Actions performed at the page using the webElement
@@ -46,6 +48,16 @@ var legoHomepage = function () {
     this.clickLegalNotice = function () {
         browser.wait(EC.elementToBeClickable(this.legalNotice), 10000);
         this.legalNotice.click();
+    }
+
+    this.clickTermsOfUse = function () {
+        browser.wait(EC.elementToBeClickable(this.termsOfUse), 10000);
+        this.termsOfUse.click();
+    }
+
+    this.clickBuildingInstructions = function () {
+        browser.wait(EC.elementToBeClickable(this.buildinginstructions), 10000);
+        this.buildinginstructions.click();
     }
 
     

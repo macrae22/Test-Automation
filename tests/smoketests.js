@@ -82,6 +82,24 @@ describe('Lego', function () {
 
         });
 
+        it('Terms of Use test', function () {
+            legoHome.clickTermsOfUse();
+            
+            //Check 'Terms of Use' header is correct
+            var termsOfUseHeader = element(by.tagName('h3'));
+            expect(termsOfUseHeader.getText()).toContain('Legal Notice');
+
+        });
+
+        it('Building Instructions test', function () {
+            legoHome.clickBuildingInstructions();
+            
+            //Check 'Building Instructions' header is correct
+            var buildingInstructionsHeader = element(by.css('h3.hgroup-txt span'));
+            expect(buildingInstructionsHeader.getText()).toContain('BUILDING INSTRUCTIONS');
+
+        });
+
     });
 
 
